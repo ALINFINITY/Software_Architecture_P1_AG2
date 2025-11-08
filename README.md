@@ -16,6 +16,7 @@ Proyecto académico desarrollado para la actividad grupal sobre **microservicios
 # Autores:
 
 - Quilumbaquin Pillisa Alan David (ProgramadorL)
+- Borja Díaz Adriana Maribel (adryborja95)
 
 
 # License
