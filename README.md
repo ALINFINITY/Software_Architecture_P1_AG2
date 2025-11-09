@@ -19,33 +19,49 @@ Proyecto académico desarrollado para la actividad grupal sobre **microservicios
 - Borja Díaz Adriana Maribel (adryborja95)
 - Acurio Vasco Andres Acurio (andy031002)
 
-# Instalación y Configuración de Laravel Sanctum
+# Instalación y Uso
 
-Se realizó la instalación de **Laravel Sanctum** con el siguiente comando:
+### Usuarios externos con permisos en el repositorio
 
-```
-composer require laravel/sanctum
-```
+`vdcriollo@espe.edu.ec` 
 
+### 1. Clonar el repositorio
 
-Después de eso, se publicaron y ejecutaron las migraciones necesarias con:
+`
+    git clone https://github.com/ALINFINITY/Software_Architecture_P1_AG2.git  
+    cd Software_Architecture_P1_AG2
+`
+### 2. Instalar dependencias
+`
+    composer install
+`
 
-```
-php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
-php artisan migrate
-```
+### 3. Configurar el entorno
+`
+    cp .env.example .env
+    Editar el archivo .env con los parámetros correspondientes:
+`
 
-Con esto se generó automáticamente la tabla **personal_access_tokens**, que se encarga de guardar los tokens de autenticación de los usuarios.
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=app_usuarios_sfa
+    DB_USERNAME=tu_usuario
+    DB_PASSWORD=tu_contraseña
+`
+### 4. Generar la clave de la aplicación
+`
+    php artisan key:generate
+`
 
-Luego, en el archivo **bootstrap/app.php**, se añadió la configuración del middleware para habilitar el manejo de las APIs:
+### 5. Ejecutar las migraciones
+`
+    php artisan migrate
+`
 
-
-```php
-->withMiddleware(function (Middleware $middleware): void {
-    $middleware->statefulApi();
-})
-```
-
+### 6. Poblar la base de datos con datos de prueba
+`
+    php artisan db:seed --class=ClaseSeeder
 # License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
