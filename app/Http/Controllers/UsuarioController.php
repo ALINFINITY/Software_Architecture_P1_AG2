@@ -49,6 +49,20 @@ class UsuarioController extends Controller
         return response()->json($usuario, 201);
     }
 
+
+    /**
+     * Muestra un usuario específico por su ID.
+     */
+    public function show($id)
+    {
+        $usuario = Usuario::find($id);
+        if (!$usuario) {
+            return response()->json(['message' => 'Usuario no encontrado'], 404);
+        }
+        return response()->json($usuario, 200);
+    }
+
+
     /**
      * Actualiza los datos de un usuario existente.
      * Solo se actualizan los campos enviados en la petición.
@@ -87,8 +101,19 @@ class UsuarioController extends Controller
         return response()->json($usuario, 200);
     }
 
+    /**
+     * Elimina un usuario existente por su ID.
+    */
 
+    public function destroy($id)
+    {
+        $usuario = Usuario::find($id);
+        if (!$usuario) {
+            return response()->json(['message' => 'Usuario no encontrado'], 404);
+        }
 
-    
+        $usuario->delete();
+        return response()->json(['message' => 'Usuario eliminado'], 200);
+    } 
 
 }
