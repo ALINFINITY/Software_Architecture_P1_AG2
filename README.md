@@ -17,8 +17,54 @@ Proyecto académico desarrollado para la actividad grupal sobre **microservicios
 
 - Quilumbaquin Pillisa Alan David (ProgramadorL)
 - Borja Díaz Adriana Maribel (adryborja95)
+- Acurio Vasco Andres Acurio (andy031002)
 
+# Instalación y Uso
+
+### Usuarios externos con permisos en el repositorio
+
+`vdcriollo@espe.edu.ec` 
+
+### 1. Clonar el repositorio
+
+`
+    git clone https://github.com/ALINFINITY/Software_Architecture_P1_AG2.git  
+    cd Software_Architecture_P1_AG2
+`
+### 2. Instalar dependencias
+`
+    composer install
+`
+
+### 3. Configurar el entorno
+`
+    cp .env.example .env
+    Editar el archivo .env con los parámetros correspondientes:
+`
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=app_usuarios_sfa
+    DB_USERNAME=tu_usuario
+    DB_PASSWORD=tu_contraseña
+`
+### 4. Generar la clave de la aplicación
+`
+    php artisan key:generate
+`
+
+### 5. Ejecutar las migraciones
+`
+    php artisan migrate
+`
+
+### 6. Desplegar el servicio
+`
+    php artisan serve
+`
 
 # License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
