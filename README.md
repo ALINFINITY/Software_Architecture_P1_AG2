@@ -17,8 +17,36 @@ Proyecto académico desarrollado para la actividad grupal sobre **microservicios
 
 - Quilumbaquin Pillisa Alan David (ProgramadorL)
 - Borja Díaz Adriana Maribel (adryborja95)
+- Acurio Vasco Andres Acurio (andy031002)
 
+# Instalación y Configuración de Laravel Sanctum
+
+Se realizó la instalación de **Laravel Sanctum** con el siguiente comando:
+
+```
+composer require laravel/sanctum
+```
+
+
+Después de eso, se publicaron y ejecutaron las migraciones necesarias con:
+
+```
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+php artisan migrate
+```
+
+Con esto se generó automáticamente la tabla **personal_access_tokens**, que se encarga de guardar los tokens de autenticación de los usuarios.
+
+Luego, en el archivo **bootstrap/app.php**, se añadió la configuración del middleware para habilitar el manejo de las APIs:
+
+
+```php
+->withMiddleware(function (Middleware $middleware): void {
+    $middleware->statefulApi();
+})
+```
 
 # License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
