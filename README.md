@@ -59,9 +59,11 @@ Proyecto académico desarrollado para la actividad grupal sobre **microservicios
     php artisan migrate
 `
 
-### 6. Poblar la base de datos con datos de prueba
+### 6. Desplegar el servicio
 `
-    php artisan db:seed --class=ClaseSeeder
+    php artisan serve
+`
+
 # License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
