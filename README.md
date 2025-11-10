@@ -69,6 +69,7 @@ El sistema devuelve **todas las respuestas en formato JSON**, incluye **validaci
 - Quilumbaquin Pillisa Alan David (ProgramadorL)
 - Borja Díaz Adriana Maribel (adryborja95)
 - Acurio Vasco Andres Acurio (andy031002)
+- Galo Wladymir Escobar Yela (wladyes)
 
 ---
 # License
