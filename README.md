@@ -18,6 +18,7 @@ Proyecto académico desarrollado para la actividad grupal sobre **microservicios
 - Quilumbaquin Pillisa Alan David (ProgramadorL)
 - Borja Díaz Adriana Maribel (adryborja95)
 - Acurio Vasco Andres Acurio (andy031002)
+- Fajardo Cueva Margarita Carina (MFajardo2812)
 
 # Instalación y Uso
 
