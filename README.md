@@ -9,16 +9,19 @@
 
 # Microservicio - Laravel 12
 
-Proyecto académico desarrollado para la actividad grupal sobre **microservicios y autenticacion** utilizando el framework Laravel 12 y base de datos MySQL.
-
----
-
 # Autores:
 
 - Quilumbaquin Pillisa Alan David (ProgramadorL)
 - Borja Díaz Adriana Maribel (adryborja95)
 - Acurio Vasco Andres Acurio (andy031002)
 - Fajardo Cueva Margarita Carina (MFajardo2812)
+
+## Descripción General
+
+Este proyecto implementa un **microservicio RESTful para la gestión de usuarios** utilizando **Laravel 12.37.0**, siguiendo el patrón **MVC (Modelo–Vista–Controlador)** y el enfoque **API First**.
+Está diseñado para ser **escalable horizontalmente**, ejecutándose en **múltiples instancias** sin compartir estado, y utiliza **Laravel Sanctum** para la autenticación basada en tokens personales.
+
+El sistema devuelve **todas las respuestas en formato JSON**, incluye **validaciones de entrada**, y expone endpoints CRUD seguros y estandarizados.
 
 # Instalación y Uso
 
