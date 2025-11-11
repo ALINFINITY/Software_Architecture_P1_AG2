@@ -12,7 +12,13 @@ use Illuminate\Validation\ValidationException;
  * Gestiona el registro, inicio y cierre de sesión usando tokens personales (Sanctum).
  */
 class AuthController extends Controller
-{
+{    
+    /**
+     * Registra un nuevo usuario, valida los datos y genera un token de acceso.
+     * La contraseña se encripta antes de guardar.
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function register(Request $request)
     {
         // Validación de los datos de entrada
