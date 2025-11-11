@@ -16,6 +16,7 @@
 - Acurio Vasco Andres Acurio (andy031002)
 - Fajardo Cueva Margarita Carina (MFajardo2812)
 - Ojeda Tello Amy Lizett (amyyy03)
+- Galo Wladyir Escobar Yela (wladyes)
 
 ## Descripción General
 
