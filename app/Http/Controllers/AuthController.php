@@ -13,7 +13,33 @@ use Illuminate\Validation\ValidationException;
  */
 class AuthController extends Controller
 {
+    public function register(Request $request)
+    {
+        // Validación de los datos de entrada
+        $validated = $request->validate([
+            'nombre' => 'required|string|max:100',
+            'correo' => 'required|string|email|unique:usuarios,correo',
+            'password' => 'required|string|min:6',
+            'rol' => 'in:ADMIN,USER',
+        ]);
 
+        // Crear el usuario y encriptar la contraseña
+        $usuario = Usuario::create([
+            'nombre' => $validated['nombre'],
+            'correo' => $validated['correo'],
+            'password' => Hash::make($validated['password']),
+            'rol' => $validated['rol'] ?? 'USER',
+        ]);
+
+        // Generar token personal para autenticación API
+        $token = $usuario->createToken('token_auth')->plainTextToken;
+
+        return response()->json([
+            'message' => 'Usuario registrado correctamente.',
+            'usuario' => $usuario,
+            'token' => $token,
+        ], 201);
+    }
 
     /**
      * Autentica un usuario y devuelve un token si las credenciales son válidas.
