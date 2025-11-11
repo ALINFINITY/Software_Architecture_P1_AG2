@@ -15,6 +15,7 @@
 - Borja Díaz Adriana Maribel (adryborja95)
 - Acurio Vasco Andres Acurio (andy031002)
 - Fajardo Cueva Margarita Carina (MFajardo2812)
+- Ojeda Tello Amy Lizett (amyyy03)
 
 ## Descripción General
 
